@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150904063029) do
+ActiveRecord::Schema.define(version: 20150904075411) do
+
+  create_table "bridges", force: :cascade do |t|
+    t.integer  "length"
+    t.string   "name"
+    t.string   "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ducks", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
