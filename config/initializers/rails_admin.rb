@@ -3,6 +3,17 @@ RailsAdmin.config do |config|
     redirect_to main_app.root_path unless current_user.admin == true
   end
 
+
+  config.model 'Comment' do
+    parent Post
+  end
+
+  config.model 'User' do
+    navigation_label 'League related'
+  end
+  
+config.navigation_static_label = "My Links"
+
   ### Popular gems integration
 
   ## == Devise ==
